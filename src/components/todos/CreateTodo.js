@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
- import { connect } from 'react-redux'; 
- 
+ import { connect } from 'react-redux';
+
 class CreateTodo extends Component {
   state = {
     text: ''
@@ -16,10 +16,10 @@ class CreateTodo extends Component {
     event.preventDefault();
     this.props.dispatch({ type: 'ADD_TODO', payload: this.state })
   }
-  
-  
-  
-  render() { 
+
+
+
+  render() {
     return(
       <div>
             <form onSubmit={ event => this.handleSubmit(event) }>
@@ -35,5 +35,5 @@ class CreateTodo extends Component {
   }
 }
 
- 
+
  export default connect()(CreateTodo); 
